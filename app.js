@@ -1,18 +1,39 @@
 let numeroSecreto = 7;
 let quantidadeTentativas = 1;
 let nome = prompt('Qual seu nome?');
-while(palpite != numeroSecreto) {
-    let palpite = prompt(`${nome}, digite um número entre 1 e 10`);
+let palpite = prompt(`${nome}, digite um número entre 1 e 10`);
     if (palpite == numeroSecreto) {
-        alert(`Certa resposta ${nome}, agora pode jogar na loteria!`);
-    }
-    else if (palpite > numeroSecreto) {
-        alert(`Errou... o número secreto é menor que ${palpite}, tente novamente!`);
-    }
-    else if (palpite < numeroSecreto) {
-        alert(`Errou..., o número secreto é maior que ${palpite}, tente novamente!`);
-    }
+    alert(`Certa resposta ${nome}, agora pode jogar na loteria!`);
 }
+while(palpite != numeroSecreto) {
+
+    if (palpite > numeroSecreto) {
+        alert(`Errou... o número secreto é menor que ${palpite}, tente novamente!`);
+        let palpite = prompt(`${nome}, digite um número entre 1 e 10`);
+    }
+    if (palpite < numeroSecreto) {
+        alert(`Errou..., o número secreto é maior que ${palpite}, tente novamente!`);
+        let palpite = prompt(`${nome}, digite um número entre 1 e 10`);
+    }
+    alert('Quantidade de tentativas: ' + quantidadeTentativas++)
+}
+
+let numeroSecreto = 7;
+let quantidadeTentativas = 1;
+let nome = prompt('Qual seu nome?');
+let palpite = prompt(`${nome}, digite um número entre 1 e 10`);
+    if (palpite == numeroSecreto) {
+    alert(`Certa resposta ${nome}, agora pode jogar na loteria!`);
+}
+    if (palpite > numeroSecreto) {
+        alert(`Errou... o número secreto é menor que ${palpite}, tente novamente!`);
+        let palpite = prompt(`${nome}, digite um número entre 1 e 10`);
+    }
+    if (palpite < numeroSecreto) {
+        alert(`Errou..., o número secreto é maior que ${palpite}, tente novamente!`);
+        let palpite = prompt(`${nome}, digite um número entre 1 e 10`);
+    }
+    alert('Quantidade de tentativas: ' + quantidadeTentativas++)
 
 var numeroSecreto = parseInt(Math.random() * 1001 + 1)
 var quantidadeTentativas = 1
